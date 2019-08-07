@@ -27,6 +27,7 @@ public:
 	Matrix operator-(Matrix&);
 	Matrix operator*(Matrix&);
 	Matrix transpose();
+	Matrix identity();
 	//
 	////Multiplicar por un escalar
 	Matrix operator+(float&);

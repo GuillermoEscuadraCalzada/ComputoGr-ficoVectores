@@ -123,6 +123,21 @@ Matrix Matrix::transpose()
 	return matriz;
 }
 
+Matrix  Matrix::identity()
+{
+	Matrix matriz(rows, cols);
+
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			if (i == j)
+				matriz(i, j) = 1;
+			else
+				matriz(i, j) = 0;
+		}
+	}
+	return matriz;
+}
+
 //Operaciones con números
 Matrix Matrix::operator+(float &number)
 {
