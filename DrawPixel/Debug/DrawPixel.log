@@ -1,4 +1,5 @@
-﻿  Matrix.cpp
+﻿  DrawPixel.cpp
+  Matrix.cpp
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(11): warning C4018: '<': no coinciden signed/unsigned
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(72): warning C4018: '<': no coinciden signed/unsigned
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(73): warning C4018: '<': no coinciden signed/unsigned
@@ -13,21 +14,22 @@ c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpix
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(119): warning C4018: '<': no coinciden signed/unsigned
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(130): warning C4018: '<': no coinciden signed/unsigned
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(131): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(146): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(147): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(158): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(159): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(170): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(171): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(182): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(183): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(198): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(199): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(156): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(157): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(168): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(169): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(180): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(181): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(192): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(193): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(208): warning C4018: '<': no coinciden signed/unsigned
 c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(209): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(210): warning C4018: '<': no coinciden signed/unsigned
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(212): warning C4244: '=': conversión de 'int' a '_Ty'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(219): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(220): warning C4018: '<': no coinciden signed/unsigned
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\matrix.cpp(222): warning C4244: '=': conversión de 'int' a '_Ty'; posible pérdida de datos
           with
           [
               _Ty=float
           ]
+  Generando código...
   DrawPixel.vcxproj -> C:\Users\Public\Documents\Visual Studio\Intro Computo Gráfico\DrawPixel\Debug\DrawPixel.exe

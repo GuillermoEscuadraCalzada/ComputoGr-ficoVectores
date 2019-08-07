@@ -138,6 +138,16 @@ Matrix  Matrix::identity()
 	return matriz;
 }
 
+Matrix Matrix::translate(Matrix mtrx, Matrix mtrz, int tx, int ty)
+{	
+	mtrx.identity();
+	mtrx;
+
+
+
+	return *this;
+}
+
 //Operaciones con números
 Matrix Matrix::operator+(float &number)
 {

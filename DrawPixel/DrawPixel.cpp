@@ -128,19 +128,19 @@ void close() {
 void pruebaDeMatrices() {
 	Matrix m1(3, 3), m2(3, 3), m3(0,0), m4(0, 0);
 	
-	//m1.ModifyMatrix(0);
-	//m1.Print();
-	/*m2.ModifyMatrix(0);
+	m1.ModifyMatrix(0);
+	m1.Print();
+	m2.ModifyMatrix(0);
 	m2.Print();
-	m3 = m1 * m2;
-	m3.Print();*/
+	m3 = m1 + m2;
+	m3.Print();
 
 	//m3 = m1.transpose();
 	//m3.Print();
 
 	
-	m3 = m1.identity();
-	m3.Print();
+	/*m3 = m1 + m2;
+	m3.Print();*/
 	/*
 	m4 = m1 * m2;
 	m4.Print();*/
