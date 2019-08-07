@@ -3,7 +3,8 @@
 #include <SDL.h>
 #include <stdio.h>
 #include <string>
-#include <cmath>
+#include "Vector.h"
+#include "Matrix.h"
 
 //Screen dimension constants
 int screenWidth = 640;
@@ -14,9 +15,13 @@ SDL_Renderer* gRenderer = NULL; //The window renderer
 
 bool init(); //Starts up SDL and creates window
 void close(); //Frees media and shuts down SDL
+void pruebaDeMatrices();
 
 
 int main(int argc, char* args[]) {
+	
+	pruebaDeMatrices();
+
 	if (!init()) { //Start up SDL and create window
 	
 		printf("Failed to initialize!\n");
@@ -27,7 +32,6 @@ int main(int argc, char* args[]) {
 		SDL_Event eventHandler; 	//Event handler
 		
 		while (!quit){ //While application is running
-		
 			
 			while (SDL_PollEvent(&eventHandler) != 0) { //Handle events on queue
 				if (eventHandler.type == SDL_QUIT) { //User requests quit
@@ -59,7 +63,8 @@ int main(int argc, char* args[]) {
 				 
 				SDL_RenderDrawPoint(gRenderer, screenWidth / 2, i);
 			}
-			
+
+
 			SDL_RenderPresent(gRenderer); //Update screen
 		}
 	}
@@ -118,4 +123,21 @@ void close() {
 
 
 	SDL_Quit();
+}
+
+void pruebaDeMatrices() {
+	Matrix m1(2, 2), m2(2, 2), m3(4, 5), m4(0, 0);
+	
+	m1.ModifyMatrix(0);
+	m1.Print();
+	/*m2.ModifyMatrix(0);
+	m2.Print();
+	m3 = m1 * m2;
+	m3.Print();*/
+
+	m3 = m1.transpose();
+	m3.Print();
+	/*
+	m4 = m1 * m2;
+	m4.Print();*/
 }
