@@ -15,6 +15,20 @@ Matrix::Matrix(unsigned _rows, unsigned _cols)
 	cols = _cols;
 }
 
+Matrix::Matrix(Vector vec)
+{
+	mat.resize(3);
+	for (int i = 0; i < mat.size(); i++) {
+		mat[i].resize(1, 0);
+	}
+	rows = 3;
+	cols = 1;
+	mat[0][0] = vec.x;
+	mat[1][0] = vec.y;
+	mat[2][0] = 1;
+
+}
+
 //Constructor de copia
 Matrix::Matrix(const Matrix & other)
 {
@@ -138,15 +152,61 @@ Matrix  Matrix::identity()
 	return matriz;
 }
 
-Matrix Matrix::translate(Matrix mtrx, Matrix mtrz, int tx, int ty)
-{	
-	mtrx.identity();
-	mtrx;
+Vector Matrix::translate(Vector& vec) {
 
+	unsigned newRows = rows + 1;
+	unsigned newCols = cols + 1;
+	Matrix traslacion(newRows, newCols);
+	Matrix v(vec);
 
+	for (int i = 0; i < newRows; i++)
+		for (int j = 0; j < newCols; j++) {
+			if (i == j)
+				traslacion(i, j) = 1;
+			else
+				traslacion(i, j) = 0;
+		}
 
-	return *this;
+	printf("Elije donde trasladar en x:\n");
+	std::cin >> traslacion(0,2);
+	printf("Elije donde trasladar en y:\n");
+	std::cin >> traslacion(1,2);
+	traslacion.Print();
+	
+	v = traslacion * v;
+
+	return Vector(v(0,0),v(1,0));
 }
+
+Vector Matrix::scale(Vector& vec)
+{
+	unsigned newRows = rows + 1;
+	unsigned newCols = cols + 1;
+	Matrix escalar(newRows, newCols);
+	Matrix v(vec);
+
+	for (int i = 0; i < newRows; i++)
+		for (int j = 0; j < newCols; j++) {
+			if (i == j)
+				escalar(i, j) = 1;
+			else
+				escalar(i, j) = 0;
+		}
+
+	printf("Elije cuanto escalar en x:\n");
+	std::cin >> escalar(0, 0);
+	printf("Elije cuanto escalar en y:\n");
+	std::cin >> escalar(1, 1);
+	escalar.Print();
+
+	v = escalar * v;
+
+	return Vector(v(0, 0), v(1, 0));
+}
+
+//Vector operator*(const Vector&) {
+//
+//}
 
 //Operaciones con números
 Matrix Matrix::operator+(float &number)
@@ -170,6 +230,7 @@ Matrix Matrix::operator-(float& number)
 			matriz(i, j) = this->mat[i][j] - number;
 		}
 	}
+
 	return matriz;
 }
 
@@ -179,7 +240,7 @@ Matrix Matrix::operator*(float &number)
 
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
-			matriz(i, j) = this->mat[i][j] * number;
+			matriz(i, j) = mat[i][j] * number;
 		}
 	}
 	return matriz;
@@ -197,6 +258,12 @@ Matrix Matrix::operator/(float &number)
 	return matriz;
 }
 
+//Vector Matrix::operator*(const Vector& vect)
+//{
+//
+//	return Vector();
+//}
+
 float & Matrix::operator() (const unsigned & row, const unsigned &col)
 {
 	return this->mat[row][col];
@@ -209,9 +276,9 @@ void Matrix::Print()
 		for (int j = 0; j < cols; j++) {
 			std::cout << mat[i][j] << " ";
 		}
-		std::cout << std::endl;
+		printf("\n");
 	}
-	std::cout << std::endl;
+	printf("\n");
 }
 
 void Matrix::ModifyMatrix(int a){

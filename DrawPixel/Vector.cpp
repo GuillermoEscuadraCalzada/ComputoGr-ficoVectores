@@ -91,3 +91,7 @@ Vector Vector::operator=(const Vector vector2)
 	
 	return Vector(x=vector2.x,y=vector2.y,z=vector2.z);
 }
+
+void Vector::Print() {
+	std::cout << "Este es tu vector: (" << x << ", " << y << ")\n";
+}

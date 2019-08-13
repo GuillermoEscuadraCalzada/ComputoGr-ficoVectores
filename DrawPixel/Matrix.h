@@ -15,6 +15,7 @@ private:
 public:
 	Matrix();
 	Matrix(unsigned rows, unsigned cols);
+	Matrix(Vector vec);
 	Matrix(unsigned _rows, unsigned _cols, int y) : rows(_rows), cols(_cols), t(y) {};
 
 	
@@ -31,14 +32,16 @@ public:
 	Matrix operator*(Matrix&);
 	Matrix transpose();
 	Matrix identity();
-	Matrix translate(Matrix, Matrix, int, int);
-	//
+	Vector translate(Vector&);
+	Vector scale(Vector&);
 	////Multiplicar por un escalar
 	Matrix operator+(float&);
 	Matrix operator-(float&);
 	Matrix operator*(float&);
 	Matrix operator/(float&);
-	//Vector operator*(const Vector&);
+	Vector operator*(const Vector&);
+
+
 
 	float& operator()(const unsigned&, const unsigned&);
 	void Print(); void ModifyMatrix(int);

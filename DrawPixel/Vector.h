@@ -1,5 +1,6 @@
 #pragma once
 #include<cmath>
+#include <iostream>
 class Vector
 {
 public:
@@ -19,5 +20,7 @@ public:
 	Vector operator*(float numero);
 	Vector operator/(float numero);
 	Vector operator=(const Vector vector2);
+
+	void Print();
 };
 
