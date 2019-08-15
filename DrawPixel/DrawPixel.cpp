@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <string>
 #include "Vector.h"
+#include "Scaling.h"
+#include "Translation.h"
+#include "Rotation.h"
+
 #include "Matrix.h"
 
 //Screen dimension constants
@@ -20,7 +24,6 @@ void pruebaDeMatrices();
 
 int main(int argc, char* args[]) {
 	
-	pruebaDeMatrices();
 
 	if (!init()) { //Start up SDL and create window
 	
@@ -63,6 +66,7 @@ int main(int argc, char* args[]) {
 				 
 				SDL_RenderDrawPoint(gRenderer, screenWidth / 2, i);
 			}
+		pruebaDeMatrices();
 			
 			SDL_RenderPresent(gRenderer); //Update screen
 		}
@@ -126,14 +130,19 @@ void close() {
 
 void pruebaDeMatrices() {
 	Matrix m1(2, 2);
+	Translation translate(3, 2);
+	Rotation rotate(20);
+	Scaling scale(3, 4);
 	Vector m3(0, 0);
-	Vector vec1(2, 3), vec2(4, 5), vec3(0,0);	
-	
+	Vector vec1(2, 3,0), vec2(4, 5, 1), vec3(0,0);	
 
-	m3 = m1.translate(vec1);
-	m3.Print();
+	vec1 = translate * vec2;
+	vec1.Print();
+	SDL_RenderDrawPoint(gRenderer, screenWidth/2 + vec1.x, screenHeight/2  - vec1.y);
 
-	m3 = m1.scale(vec2);
-	m3.Print();
-
+	vec1 = rotate * vec2;
+	vec1.Print();
+	 
+	vec1 = scale * vec2;
+	vec1.Print();
 }

@@ -156,6 +156,9 @@
   <ItemGroup>
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Rotation.h" />
+    <ClInclude Include="Scaling.h" />
+    <ClInclude Include="Translation.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +170,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Rotation.cpp" />
+    <ClCompile Include="Scaling.cpp" />
+    <ClCompile Include="Translation.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
