@@ -92,6 +92,22 @@ Vector Vector::operator=(const Vector vector2)
 	return Vector(x=vector2.x,y=vector2.y,z=vector2.z);
 }
 
+void Vector::setValues(int _x, int _y, int _z)
+{
+	x = _x;
+	y = _y;
+	z = _z;
+}
+
 void Vector::Print() {
 	std::cout << "Este es tu vector: (" << x << ", " << y << ")\n";
+}
+
+void Vector::ModifyVector()
+{
+	//El usuario ingresará cada valor del eje 'X' y 'Y'
+	std::cout << "Ingresa los valores de x: ";
+	std::cin >> x; printf("\n");
+	std::cout << "Ingresa los valores de y: ";
+	std::cin >> y; printf("\n\n");
 }

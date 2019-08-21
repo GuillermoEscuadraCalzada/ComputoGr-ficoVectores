@@ -1,7 +1,10 @@
 #include "pch.h"
 #include "Rotation.h"
 
-
+float Rotation::setAngle(float _angle) {
+	angle = _angle;
+	return angle;
+}
 Rotation::Rotation(float angle) {
 	mat.resize(3);
 	for (int i = 0; i < mat.size(); i++) {
@@ -17,3 +20,4 @@ Rotation::Rotation(float angle) {
 Rotation::~Rotation()
 {
 }
+

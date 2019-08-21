@@ -2,6 +2,19 @@
 #include "Scaling.h"
 
 
+int Scaling::setSX(int _sx)
+{
+	sx = _sx;
+	return sx;
+}
+
+int Scaling::setSY(int _sy)
+{
+	sy = _sy;
+	return sy;
+}
+
+
 Scaling::Scaling(int sx, int sy)
 {
 	mat.resize(3);

@@ -14,20 +14,7 @@ Matrix::Matrix(unsigned _rows, unsigned _cols)
 	rows = _rows;
 	cols = _cols;
 }
-//
-//Matrix::Matrix(Vector vec)
-//{
-//	mat.resize(3);
-//	for (int i = 0; i < mat.size(); i++) {
-//		mat[i].resize(1, 0);
-//	}
-//	rows = 3;
-//	cols = 1;
-//	mat[0][0] = vec.x;
-//	mat[1][0] = vec.y;
-//	mat[2][0] = 1;
-//
-//}
+
 
 //Constructor de copia
 Matrix::Matrix(const Matrix & other)
@@ -151,82 +138,6 @@ Matrix  Matrix::identity()
 	return matriz;
 }
 
-//Vector Matrix::translate(Vector& vec) {
-//
-//	unsigned newRows = rows + 1;
-//	unsigned newCols = cols + 1;
-//	Matrix traslacion(newRows, newCols);
-//	Matrix v(vec);
-//
-//	for (int i = 0; i < newRows; i++)
-//		for (int j = 0; j < newCols; j++) {
-//			if (i == j)
-//				traslacion(i, j) = 1;
-//			else
-//				traslacion(i, j) = 0;
-//		}
-//
-//	printf("Elije donde trasladar en x:\n");
-//	std::cin >> traslacion(0,2);
-//	printf("Elije donde trasladar en y:\n");
-//	std::cin >> traslacion(1,2);
-//	traslacion.Print();
-//	printf("\n");
-//
-//	v = traslacion * v;
-//
-//	return Vector(v(0,0),v(1,0));
-//}
-//
-//Vector Matrix::scale(Vector& vec)
-//{
-//	unsigned newRows = rows + 1;
-//	unsigned newCols = cols + 1;
-//	Matrix escalar(newRows, newCols);
-//	Matrix v(vec);
-//
-//	for (int i = 0; i < newRows; i++)
-//		for (int j = 0; j < newCols; j++) {
-//			if (i == j)
-//				escalar(i, j) = 1;
-//			else
-//				escalar(i, j) = 0;
-//		}
-//
-//	printf("Elije cuanto escalar en x:\n");
-//	std::cin >> escalar(0, 0);
-//	printf("Elije cuanto escalar en y:\n");
-//	std::cin >> escalar(1, 1);
-//	escalar.Print();
-//	printf("\n");
-//
-//	v = escalar * v;
-//
-//	return Vector(v(0, 0), v(1, 0));
-//}
-//
-//Vector Matrix::rotation(Vector& vec, int angle)
-//{
-//	unsigned newRows = rows + 1;
-//	unsigned newCols = cols + 1;
-//	Matrix traslacion(newRows, newCols);
-//	Matrix v(vec);
-//
-//	for (int i = 0; i < newRows; i++)
-//		for (int j = 0; j < newCols; j++) {
-//			traslacion(0,0)= std::cos((angle * 57.2958)/180);
-//			traslacion(0,1) = std::sin((angle * 57.2958) / 180);
-//			traslacion(1,0) = -std::sin((angle * 57.2958) / 180);
-//			traslacion(1,1) = std::cos((angle * 57.2958) / 180);
-//			traslacion(2, 2) = 1;
-//		}
-//
-//	traslacion.Print();
-//	printf("\n");
-//	v = traslacion * v;
-//
-//	return Vector(v(0, 0), v(1, 0));
-//}
 
 Vector Matrix::operator*(const Vector& vec1) {
 	//Matrix matrx(rows,cols);
@@ -251,11 +162,11 @@ Matrix Matrix::operator+(float &number)
 {
 	Matrix matrix(rows, cols);
 
-	/*for (int i = 0; i < rows; i++) {
+	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			matrix(i, j) = mat[i][j] + number;
 		}
-	}*/
+	}
 	return matrix;
 }
 
@@ -276,11 +187,11 @@ Matrix Matrix::operator*(float &number)
 {
 	Matrix matr(rows, cols);
 
-	/*for (int i = 0; i < rows; i++) {
+	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			matr(i, j) = mat[i][j] * number;
 		}
-	}*/
+	}
 	return matr;
 }
 
@@ -314,14 +225,31 @@ void Matrix::Print()
 	printf("\n");
 }
 
-void Matrix::ModifyMatrix(int a){
-
+void Matrix::ModifyMatrix(){
+	int a = 0;
+	printf("Ingresa los valores de cada elemento de la matriz.\n");
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			std::cin >> a;
 			mat[i][j]= a;
 		}
 	}
+
+}
+
+void Matrix::VectorInMatrix(Vector &vec1, Vector &vec2)
+{
+	
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			
+			mat[0][0] = vec1.x;
+			mat[0][1] = vec1.y;
+			mat[1][0] = vec2.x;
+			mat[1][1] = vec2.y;
+		}
+	}
+
 
 }
 

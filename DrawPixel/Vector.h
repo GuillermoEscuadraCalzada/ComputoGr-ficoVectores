@@ -21,6 +21,11 @@ public:
 	Vector operator/(float numero);
 	Vector operator=(const Vector vector2);
 
-	void Print();
+	void setValues(int,int,int);
+	
+
+
+
+	void Print(); void ModifyVector();
 };
 

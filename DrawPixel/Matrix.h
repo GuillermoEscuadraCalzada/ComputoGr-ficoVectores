@@ -34,9 +34,6 @@ public:
 	Matrix operator*(Matrix&);
 	Matrix transpose();
 	Matrix identity();
-	//Vector translate(Vector&);
-	//Vector scale(Vector&);
-	//Vector rotation(Vector&,int);
 	////Multiplicar por un escalar
 	Matrix operator+(float&);
 	Matrix operator-(float&);
@@ -47,7 +44,7 @@ public:
 
 
 	float& operator()(const unsigned&, const unsigned&);
-	void Print(); void ModifyMatrix(int);
+	void Print(); void ModifyMatrix(); void VectorInMatrix(Vector&, Vector&);
 
 };
 

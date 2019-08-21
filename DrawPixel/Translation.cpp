@@ -2,6 +2,18 @@
 #include "Translation.h"
 
 
+void Translation::setVX(int _vx)
+{
+	int vx = _vx;
+
+}
+
+void Translation::setVY(int _vy)
+{
+	int vy = _vy;
+
+}
+
 Translation::Translation(int vx, int vy){
 	
 	mat.resize(3);
