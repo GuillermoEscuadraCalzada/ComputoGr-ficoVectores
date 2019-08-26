@@ -24,8 +24,8 @@ Vector vector3(0, 0), vector4(2,3,1),pendiente(0, 0), linea(0,0);
 
 bool init(); //Starts up SDL and creates window
 void close(); //Frees media and shuts down SDL
-void pruebaDeMatrices(); void pendientesConVectores(Vector&, Vector&); void drawPixel(int x, int y); void digitalDiferentialAnalyzer(); void algoritmoDeBresenham();
-void pendientes(/*Vector&, Vector&*/); void digitalDiferentialAnalyzer(Vector&, Vector&); void operacionesEntreVectores(Vector&, Vector&);
+void pruebaDeMatrices(); void pendientesConVectores(Vector&, Vector&); void drawPixel(int x, int y);  void algoritmoDeBresenham();
+void digitalDiferentialAnalyzer(Vector&, Vector&); void operacionesEntreVectores(Vector&, Vector&); void drawCircle();
 void operacionesConMatrices(Matrix&);  void MatrizTraslacion(Vector& x, Vector& y);  void MatrizEscalacion(Vector& x, Vector& y); void MatrizRotacion(Vector&, Vector&);
 
 int main(int argc, char* args[]) {
@@ -92,9 +92,8 @@ int main(int argc, char* args[]) {
 			//vector3 = translate * vector4;
 			//vector3.Print();
 			//pruebaDeMatrices();
-			algoritmoDeBresenham();
-			//pendientes();
-			//digitalDiferentialAnalyzer();
+			//algoritmoDeBresenham();
+			drawCircle();
 			SDL_RenderPresent(gRenderer); //Update screen
 		}
 	}
@@ -212,50 +211,6 @@ void pruebaDeMatrices() {
 		
 }
 
-void pendientes() {
-	int X1, X2, Y1, Y2;
-	float x, y;
-
-	printf("Introduce los valores de tus vectores.\nX1 y Y1\n");
-	std::cin >> X1 >> Y1;
-	printf("\nX2 y Y2\n");
-	std::cin >> X2 >> Y2;
-	y = Y1;
-	x = X1;
-
-	//printf("Ahora, calculare 'm' y 'c' para ti.\n");
-
-	float m = (Y2 - Y1) / (X2 - X1);
-	std::cout << "M: "<< m << std::endl;  
-	float c = y - m * x;
-	std::cout <<"C: "<< c << std::endl;
-
-	if (abs(m) < 1) {
-		for (int i = X1; i < X2; i++) {
-			pendiente.setValues(x, y, 0);
-			pendiente.Print();
-			drawPixel(x, y);
-			x = x + 1;
-			y = (m * x) + c;
-
-
-		}
-	}
-
-	else if (abs(m) > 1) {
-		for (int i = Y1; i < Y2; i++) {
-			x = (y - c) / m;
-			y = y + 1;
-			drawPixel(x, y);
-			pendiente.setValues(x, y, 0);
-			pendiente.Print();
-		}
-	}
-
-	else
-		std::cout << "estas mal.\n";
-}
-
 void pendientesConVectores(Vector& vec1, Vector& vec2) {
 	int X1 = vec1.x, X2 = vec2.x, Y1 = vec1.y, Y2 = vec2.y, x, y;
 
@@ -279,9 +234,7 @@ void pendientesConVectores(Vector& vec1, Vector& vec2) {
 
 
 		}
-	}
-
-	else if (abs(m) > 1) {
+	} else if (abs(m) > 1) {
 		for (int i = Y1; i < Y2; i++) {
 			x = (y - c) / m;
 			y = y + 1;
@@ -289,71 +242,8 @@ void pendientesConVectores(Vector& vec1, Vector& vec2) {
 			pendiente.setValues(x, y, 0);
 			pendiente.Print();
 		}
-	}
-
-	else
+	} else
 		std::cout << "estas mal.\n";
-
-}
-
-void digitalDiferentialAnalyzer() {
-	int  X1, X2, Y1, Y2, x, y, incremento;
-	float xINCRMNT = 0.0f, yINCRMNT = 0.0f, dx = 0, dy = 0, DENO;
-
-
-	printf("Por favor, escribe los valores de X1, X2, Y1 y Y2 \n");
-
-	//introduccion de los valores X1 y Y1
-	printf("X1: "); cin >> X1;
-	printf("\nY1: "); cin >> Y1;
-
-	//introduccion de los valores X2 y Y2
-	printf("\nX2: "); cin >> X2;
-	printf("\nY2: "); cin >> Y2;
-
-	//Calulos de dx y dy
-	dx = abs(X2 - X1);
-	dy = abs(Y2 - Y1);
-
-
-	cout << "\n\nDX: " << dx << "\nDY: " << dy << "\n\n";
-
-
-	//Obtencion del denominador
-	//sí es mayor dx a dy, DENO es dx
-	if (dx > dy) {
-		DENO = dx;
-	}
-
-	//sí es mayor o igual dy a dx, DENO es dy
-	if (dy >= dx) {
-		DENO = dy;
-	}
-
-	//ahora podemos conseguir xINCRMNT y yINCRMNT
-	xINCRMNT = dx / DENO;
-	yINCRMNT = dy / DENO;
-
-
-	//Impresion de valores anteriores
-	cout << "Incremento en X: " << xINCRMNT << "\n";
-	cout << "Incremento en Y: " << yINCRMNT << "\n";
-
-
-	x = X1;
-	y = Y1;
-	incremento = 0;
-
-	//empezamos un ciclo para dibujar la linea por medio de pixeles.
-
-	while (incremento <= DENO) {
-		drawPixel(x, y);
-		linea.setValues(x, y, 0);
-		linea.Print();
-		x = x + xINCRMNT;
-		y = y + yINCRMNT;
-		incremento++;
-	}
 
 }
 
@@ -699,9 +589,7 @@ void algoritmoDeBresenham() {
 			y = y;
 			P = P + 2 * dy;
 			cout << P << endl;
-		}
-
-		else if(P >= 0){
+		} else if(P >= 0){
 			drawPixel(x, y);
 			pendiente.setValues(x, y, 0);
 			pendiente.Print();
@@ -718,9 +606,45 @@ void algoritmoDeBresenham() {
 
 void drawPixel(int x, int y) {
 	SDL_RenderDrawPoint(gRenderer, screenWidth / 2 + x, screenHeight / 2 - y);
-	//SDL_RenderDrawLine(gRenderer, , screenHeight / 2 - y);
-
-
 }
 
+void drawCircle() {
+	//centro del círculo
+	int Xc, Yc;
 
+	//pixeles, radio y parametro.
+	int x, y, Radius, Perimeter;
+
+	cout << "Introduce los valores del centro del circulo.\nXC: ";
+	cin >> Xc;
+	cout << "YC: ";
+	cin >> Yc;
+
+	cout << "Ahora introduce el valor del radio.\nRadio: ";
+	cin >> Radius;
+
+	x = 0;
+	y = Radius;
+	Perimeter = 1 - Radius;
+
+	for (int i = 0; x <= y; i++) {
+		drawPixel(x + Xc, y + Yc);
+		if (Perimeter <= 0) {
+			x = x + 1;
+			y = y;
+			Perimeter = Perimeter + 2 * x  +3;
+		} else if (Perimeter > 0) {
+			x = x + 1;
+			y = y - 1;
+			Perimeter = 2 *x - 2 * y + 5 + Perimeter;
+		}
+
+		drawPixel(x + Xc, -y + Yc);
+		drawPixel(-x + Xc, y + Yc);
+		drawPixel(-x + Xc, -y + Yc);
+		drawPixel(y + Xc, x + Yc);
+		drawPixel(y + Xc, -x + Yc);
+		drawPixel(-y + Xc, x + Yc);
+		drawPixel(-y + Xc, -x + Yc);
+	}
+}
