@@ -1,40 +1,43 @@
 ﻿  DrawPixel.cpp
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(167): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(173): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(182): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(189): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(215): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(222): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(233): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(239): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(251): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(254): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(255): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(262): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(263): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(292): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(293): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(323): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(332): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(339): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(346): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(354): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(357): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(358): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(365): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(366): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(375): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(378): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(379): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(386): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(387): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(372): warning C4101: 'numero2': variable local sin referencia
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(501): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(507): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(529): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(535): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(551): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(557): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(579): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(561): warning C4101: 'incremento': variable local sin referencia
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(170): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(176): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(185): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(192): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(218): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(225): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(236): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(242): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(254): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(257): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(258): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(265): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(266): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(295): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(296): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(326): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(335): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(342): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(349): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(357): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(360): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(361): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(368): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(369): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(378): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(381): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(382): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(389): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(390): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(375): warning C4101: 'numero2': variable local sin referencia
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(504): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(510): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(532): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(538): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(554): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(560): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(582): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(564): warning C4101: 'incremento': variable local sin referencia
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(665): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(666): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\public\documents\visual studio\intro computo gráfico\drawpixel\drawpixel\drawpixel.cpp(667): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   DrawPixel.vcxproj -> C:\Users\Public\Documents\Visual Studio\Intro Computo Gráfico\DrawPixel\Debug\DrawPixel.exe

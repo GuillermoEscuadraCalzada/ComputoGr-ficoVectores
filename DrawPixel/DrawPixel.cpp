@@ -20,12 +20,14 @@ Matrix matrix1(2, 2), matrix2(2,2), matrix3(2,2);
 //Translation translate(3, 2);
 //Rotation rotate(20);
 //Scaling scale(3, 4);
-Vector vector3(0, 0), vector4(2,3,1),pendiente(0, 0), linea(0,0);
+Vector vector3, vector4,pendiente(0, 0), linea(0,0),vector1, vector2;
+
+
 
 bool init(); //Starts up SDL and creates window
 void close(); //Frees media and shuts down SDL
 void pruebaDeMatrices(); void pendientesConVectores(Vector&, Vector&); void drawPixel(int x, int y);  void algoritmoDeBresenham();
-void digitalDiferentialAnalyzer(Vector&, Vector&); void operacionesEntreVectores(Vector&, Vector&); void drawCircle();
+void digitalDiferentialAnalyzer(Vector&, Vector&); void operacionesEntreVectores(Vector&, Vector&); void drawCircle(); void bezierCurve(Vector&,Vector&,Vector&,Vector&);
 void operacionesConMatrices(Matrix&);  void MatrizTraslacion(Vector& x, Vector& y);  void MatrizEscalacion(Vector& x, Vector& y); void MatrizRotacion(Vector&, Vector&);
 
 int main(int argc, char* args[]) {
@@ -90,10 +92,11 @@ int main(int argc, char* args[]) {
 				SDL_RenderDrawPoint(gRenderer, screenWidth / 2, i);
 			}
 			//vector3 = translate * vector4;
+			bezierCurve(vector1, vector2, vector3, vector4);
 			//vector3.Print();
 			//pruebaDeMatrices();
 			//algoritmoDeBresenham();
-			drawCircle();
+			//drawCircle();
 			SDL_RenderPresent(gRenderer); //Update screen
 		}
 	}
@@ -647,4 +650,22 @@ void drawCircle() {
 		drawPixel(-y + Xc, x + Yc);
 		drawPixel(-y + Xc, -x + Yc);
 	}
+}
+
+void bezierCurve(Vector& vec1, Vector& vec2, Vector& vec3, Vector& vec4) {	
+	cout << "Vector1 X y Y: "; cin >> vec1.x; cin >> vec1.y;
+	cout << "Vector2 X y Y: "; cin >> vec2.x; cin >> vec2.y;
+	cout << "Vector3 X y Y: "; cin >> vec3.x; cin >> vec3.y;
+	cout << "Vector4 X y Y: "; cin >> vec4.x; cin >> vec4.y;
+
+	//int t = 1;
+	double x = 0.0, y = 0.0;
+	Vector temp;
+
+	for (double i = 0.0; i <= 1; i += 0.0001) {
+		temp.x = pow(1 - i, 3) * vec1.x + (3 * i)*(pow(1 - i, 2) * vec2.x) + (3 * pow(i, 2))*(1 - i *vec3.x) + (pow(i, 3))*(vec4.x);
+		temp.y = pow(1 - i, 3) * vec1.y + (3 * i)*(pow(1 - i, 2) * vec2.y) + (3 * pow(i, 2))*(1 - i *vec3.y) + (pow(i, 3))*(vec4.y);
+		drawPixel(temp.x, temp.y);
+	}
+
 }
